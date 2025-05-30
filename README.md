@@ -20,6 +20,11 @@
 
 Add the plugin to your `build.gradle.kts`:
 
+```kts
+plugins {
+    id("dev.zornov.uploader") version "1.3"
+}
+```
 ---
 
 ## Configuration
