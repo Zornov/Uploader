@@ -7,7 +7,6 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Nested
 
-
 open class UploaderExtension(project: Project) {
 
     @get:Input

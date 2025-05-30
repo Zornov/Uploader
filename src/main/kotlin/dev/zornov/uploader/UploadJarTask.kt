@@ -4,6 +4,7 @@ import dev.zornov.uploader.controller.pterodactyl.PterodactylControllerService
 import dev.zornov.uploader.controller.rcon.RCONControllerService
 import dev.zornov.uploader.file.sftp.SFTPFilesService
 import dev.zornov.uploader.plugin.UploaderExtension
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Nested
@@ -40,6 +41,7 @@ abstract class UploadJarTask : DefaultTask() {
             RCONControllerService(it.host, it.port, it.password).apply {
                 start()
                 for (command in it.commands.list) {
+                    delay(500)
                     executeCommand(command)
                 }
                 stop()
@@ -52,6 +54,7 @@ abstract class UploadJarTask : DefaultTask() {
             PterodactylControllerService(it.apiUrl, it.apiKey, it.serverId).apply {
                 start()
                 for (command in it.commands.list) {
+                    delay(500)
                     executeCommand(command)
                 }
                 stop()
