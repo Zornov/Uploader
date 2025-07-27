@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.zornov"
-version = "1.3"
+version = "1.0"
 
 gradlePlugin {
     plugins {
