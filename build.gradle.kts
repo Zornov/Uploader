@@ -33,21 +33,6 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
 }
 
-publishing {
-    repositories {
-        maven {
-            name = "reposlate"
-            url = uri("http://94.156.170.35:4040/releases")
-            credentials(PasswordCredentials::class)
-            authentication {
-                create<BasicAuthentication>("basic")
-            }
-            isAllowInsecureProtocol = true
-        }
-    }
-}
-
-
 kotlin {
     jvmToolchain(21)
 }
